@@ -43,6 +43,8 @@ jasmine.DEFAULT_UPDATE_INTERVAL = window.setTimeout ? 250 : 0;
  */
 jasmine.bindOriginal_ = function(base, name) {
   var original = base[name];
+  // in cases where the 'name' property doesnt exist
+  if(!original) return null;
   if (original.apply) {
     return function() {
       return original.apply(base, arguments);
