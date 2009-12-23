@@ -12,9 +12,6 @@ jasmine.Env = function() {
 
   this.updateInterval = jasmine.DEFAULT_UPDATE_INTERVAL;
   this.lastUpdate = 0;
-  this.specFilter = function() {
-    return true;
-  };
 
   this.nextSpecId_ = 0;
   this.nextSuiteId_ = 0;

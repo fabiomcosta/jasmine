@@ -127,7 +127,7 @@ jasmine.Spec.prototype.after = function(doAfter, test) {
 
 jasmine.Spec.prototype.execute = function(onComplete) {
   var spec = this;
-  if (!spec.env.specFilter(spec)) {
+  if (!spec.env.reporter.specFilter(spec)) {
     spec.results_.skipped = true;
     spec.finish(onComplete);
     return;
