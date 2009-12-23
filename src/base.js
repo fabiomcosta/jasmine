@@ -1,3 +1,10 @@
+
+/**
+ * Allows non browser enviroments (rhino and other interpreters) to have a global window object
+ *
+ */
+var window = window || this;
+
 /**
  * Top level namespace for Jasmine, a lightweight JavaScript BDD/spec/testing framework.
  *
