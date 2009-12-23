@@ -31,7 +31,7 @@ jasmine.undefined = jasmine.___undefined___;
  * Default interval for event loop yields. Small values here may result in slow test running. Zero means no updates until all tests have completed.
  *
  */
-jasmine.DEFAULT_UPDATE_INTERVAL = 250;
+jasmine.DEFAULT_UPDATE_INTERVAL = window.setTimeout ? 250 : 0;
 
 /**
  * Allows for bound functions to be compared.  Internal use only.
